@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instrumentation Department</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+   rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <center>
+      <ul>
+        <li class="Call"><a href="#Call"> <img class="Call" src="https://www.maxpixel.net/static/photo/1x/Sewing-Needle-Computer-Icon-Fashion-Sewing-Icon-Set-2387085.png"></a></li>
+        <li class="Ad"> Instrumentation Department </li>
+        <a href="#myModalLogIn" onclick="document.getElementById('myModalLogIn').style.display='block'" id="myBtn">
+          <li class="Login"><b> Login </b></li></a>
+        <a href="#myModalSignup" onclick="document.getElementById('myModalSignup').style.display='block'" id="myBtn"><li class="Signup"><b> Signup </b></li></a>
+        <a href="#Help"><li class="Help"><b> Help </b></li></a>
+        <a href="Cart.html"><li class="Cart"> <img class="Cart" src="https://cdn.iconscout.com/icon/free/png-256/shopping-trolley-2130858-1794989.png"></li></a>
+      </ul>
+        <div id="myModalLogIn" class="modalLS">
+          <!-- Modal content -->
+          <div class="modal-content3">
+            <span class="close" onclick="document.getElementById('myModalLogIn').style.display='none'" style="color:black">x</span>
+            <img class="DP" style="width: 200px; height:200px; margin-top:1%; padding:0%;" src="img/ves.png">
+            <center><b style="font-size:30px;"><br> Log In </b></center><br>
+            <form name="myForm" onsubmit="logindone()" method="post">
+            <ul style="margin-left:0%; padding-left:0%;">
+            <li style="margin-left:0%; padding-left:0%;">
+              <input type="email" name="email" style="width:80%; height:40px; font-size:30x;" placeholder="Email" required><br>
+            </li>
+            <br>
+            <li>
+              <input type="password" name="password" style="width:80%; height:40px; font-size:30x;" placeholder="Password" required><br>
+            </li>
+            <br>
+            <li>
+              <b><a><input type="submit" class="submitLogin" value="Submit"></a></b>
+            </li>
+            </form>
+          </div>
+        </div>
+      </ul>
+        <div id="myModalSignup" class="modalLS">
+          <!-- Modal content -->
+          <div class="modal-content4">
+            <span class="close" onclick="document.getElementById('myModalSignup').style.display='none'" style="color:black">x</span>
+            <img class="DP" style="width: 200px; height:200px; margin-top:7%; padding:0%;" src="https://www.maxpixel.net/static/photo/1x/Sewing-Needle-Computer-Icon-Fashion-Sewing-Icon-Set-2387085.png">
+            <center><b style="font-size:30px;"><br> Sign Up </b></center><br>
+            <form name="myForm" onsubmit="return checkPassword(this)" method="post">
+            <ul style="margin-left:0%; padding-left:0%;">
+            <li style="margin-left:0%; padding-left:0%;">
+              <input type="text" name="fname" style="width:39%; height:40px; font-size:30x;" placeholder="First Name" required>
+            </li>
+            <li style="margin-left:0%; padding-left:0%;">
+              <input type="text" name="lname" style="width:39%; height:40px; font-size:30x;" placeholder="Last Name" required><br>
+            </li>
+            <br><b style="font-size: 22px;">Gender:</b>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+            <br><br><b style="font-size: 22px;">Date of Birth: &nbsp&nbsp</b>
+            <input type="date" id="birthday" name="birthday"><br>
+            <li style="margin-left:0%; padding-left:0%;">
+              <br><input type="email" name="email" style="width:80%; height:40px; font-size:30x;" placeholder="Email" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required><br>
+            </li>
+            <br>
+            <li>
+              <input type="password" name="password" style="width:80%; height:40px; font-size:30x;" placeholder="Password" required><br>
+            </li>
+            <li style="margin-left:3%; padding-left:0%; color:red;"* 1 Lower letter, 1 Capital letter, 1 digit and 1-8 characters.><br>
+            </li>
+            <br>
+            <li>
+              <input type="password" name="apassword" style="width:80%; height:40px; font-size:30x;" placeholder="Again Password" required><br>
+            </li>
+            <br>
+            <li>
+              <b><a><input type="submit" class="submitSignup" value="Submit"></a></b>
+            </li>
+          </ul>
+        </form>
+        </div>
+      </div>
+    </center>
+    <center>
+    <section class="LBS">
+       <ul>
+        <li class="Call"> <img class="Call" src="https://cdn.iconscout.com/icon/free/png-256/incoming-call-470341.png"></li>
+        <li class="Dial"> Call us : (+0123) 234 567</li>
+        <a href="index.html"><li class="Brand"><img class="Brand" src=""></a></li></a>
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit"><img class="Search" src="https://cdn.pixabay.com/photo/2017/01/13/01/22/magnifying-glass-1976105_1280.png"></button>
+      </ul>
+    </section>
+    </center>
+    
+    <center>
+    <nav>
+      <ul>
+        <a href="index.html"><li class="Home"> Home </li></a>
+        <a href="clothes.html"> <li class="Groceries">Clothes</li></a>
+        <a href="Accessories.html"> <li class="Household">Accessories</li></a>
+        <a href="AboutUs.html"><li class="AboutUs"> About Us </li></a>
+        <a href="ContactUs.html"> <li class="ContactUs">Contact Us </li></a>
+      </ul>
+    </nav>
+    </center>
+  </header>
+    
+    <div class="Slider">
+      <div class="Slide" >
+        <img class="MySlides" src="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/upwk61843344-wikimedia-image.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=fed35f290204419da6cab7586d6fd652" style="width:100%">
+        <img class="MySlides" src="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/upwk61843054-wikimedia-image.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=fd4d1a40ba3890ec3784051226075a65" style="width:100%">
+        <img class="MySlides" src="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/upwk61843118-wikimedia-image.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=7589e7a7204b9d82ff65da53d8f20ea7" style="width:100%">
+      </div>
+    </div>
+
+    <div class="Product">
+       <div class="row">
+         <center>
+         <div class="column">
+           <ul>
+             <li>
+               <img class="Grocery" src="https://static.thenounproject.com/png/1444086-200.png">
+             </li>
+             <br>
+             <a href="clothes.html">
+             <li class="Bar">
+               <h3><b><center> Clothes </center></b></h3>
+             </li>
+             </a>
+           </ul>
+         </div>
+         <div class="column">
+           <ul>
+             <li>
+               <img class="Accessories" src="https://static.thenounproject.com/png/1296467-200.png">
+             </li>
+             <br>
+             <a href="HouseHold.html">
+             <li class="Bar">
+               <h3><b><center> Accessories </center></b></h3>
+             </li>
+             </a>
+           </ul>
+         </div>
+         <div class="column">
+           <ul>
+             <li>
+               <img class="AboutUs" width: 15px; height:15px; src="https://static.thenounproject.com/png/362201-200.png">
+             </li>
+             <br>
+             <a href="aboutUs.html">
+             <li class="Bar">
+               <h3><b><center> About us  </center></b></h3>
+             </li>
+             </a>
+           </ul>
+         </div>
+         <div class="column">
+           <ul>
+             <li>
+               <img class="ContactUs" src="https://static.thenounproject.com/png/445953-200.png">
+             </li>
+             <br>
+             <a href="contactUs.html">
+             <li class="Bar">
+               <h3><b><center> Contact Us </center></b></h3>
+             </li>
+             </a>
+           </ul>
+         </div>
+         </center>
+       </div>
+    </div>
+   <footer>
+
+    <div class="footerNav">
+      <div>
+        <ul>
+        <center><a href="index.html"><li><img class="DP" style=" margin-top:1%; margin-bottom:1%; margin-left:7%;" src="https://www.maxpixel.net/static/photo/1x/Sewing-Needle-Computer-Icon-Fashion-Sewing-Icon-Set-2387085.png"></li></a></center>
+        </ul>
+      </div>
+      <div>
+      <ul>
+        <li style="color:rgb(240, 226, 38); padding-top:.5%;"><h3><b>Inportant Links </b></h3></li>
+        <li class="Home"><a href="index.html"> Home </a></li>
+        <li class="Groceries"><a href="clothes.html">Clothes</a></li>
+        <li class="Household"><a href="Accessories.html">Accessories</a></li>
+        <li class="AboutUs"><a href="AboutUs.html"> About Us </a></li>
+        <li class="ContactUs"><a href="ContactUs.html"> Contact Us </a></li>
+      </ul>
+      </div>
+      <div>
+      <ul>
+        <li style="color:rgb(240, 226, 38); padding-top:.5%;"><h3><b>Details</b></h3></li>
+        <li><b style="color:white"><h4 style="display:inline;">&nbsp&nbsp Mobile: &nbsp </h4></b><a href="tel:0123456789"> +91-0123456789</a></li>
+        <li><b style="color:white"><h4 style="display:inline;">&nbsp&nbsp Email:&nbsp </h4></b><a href="mailto:example@gmail.com?subject=subject text"> example@gmail.com </a></li>
+        <li><b style="color:white"><h4 style="display:inline;">&nbsp&nbsp Linkedin:&nbsp</h4> </b><a  href="https://www.linkedin.com/in/tulika-panjal-037507193"> www.linkedin.com/in/tulika-panjal-037507193</a></li>
+        <li><b style="color:white"><h4 style="display:inline;">&nbsp&nbsp Instagram:&nbsp </h4></b><a  href="https://www.instagram.com"> www.instagram.com</a></li>
+        <li><b style="color:white"><h4 style="display:inline;">&nbsp&nbsp Facebook: &nbsp</h4></b><a  href="https://www.fb.com"> www.fb.com</a></li>
+      </ul><br>
+      </div>
+    </div>
+    <br>
+      <center>
+      Designed by <b> Shreya </b>
+      <br>
+      </center>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+
+  
+
+</html>

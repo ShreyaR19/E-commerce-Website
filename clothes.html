@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothes | Fashonista</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <header><center>
+      <ul>
+        <li class="Call"><a href="#Call"> <img class="Call" src="https://www.maxpixel.net/static/photo/1x/Sewing-Needle-Computer-Icon-Fashion-Sewing-Icon-Set-2387085.png"></a></li>
+        <li class="Ad"> FASHONISTA <i>"One stop solution for fashion"</i>  </li>
+        <li class="Login"><a href="#myModalLogin" onclick="document.getElementById('myModalLogin').style.display='block'" id="myBtn"><b> Login </b></a></li>
+        <li class="Signup"><a href="#myModalSignup" onclick="document.getElementById('myModalSignup').style.display='block'" id="myBtn"><b> Signup </b></a></li>
+        <li class="Help"><a href="#Help"><b> Help </b></a></li>
+        <li class="Cart"><a href="Cart.html"> <img class="Cart" src="https://cdn.iconscout.com/icon/free/png-256/shopping-trolley-2130858-1794989.png"></a></li>
+      </ul>
+        <div id="myModalLogin" class="modalLS">
+               <!-- Modal content -->
+               <div class="modal-content3">
+                 <span class="close" onclick="document.getElementById('myModalLogin').style.display='none'" style="color:black">x</span>
+                 <center><img class="ava" src="https://www.maxpixel.net/static/photo/1x/Sewing-Needle-Computer-Icon-Fashion-Sewing-Icon-Set-2387085.png"></center>
+                 <center><b style="font-size:30px;"><br> Log In </b></center><br>
+                 <form name="myForm" onsubmit="logindone()" method="post">
+                   <ul style="margin-left:0%; padding-left:0%;">
+                     <li style="margin-left:0%; padding-left:0%;">
+                       <input type="email" name="email"  class="email" placeholder="Email" required><br>
+                     </li>
+                     <br>
+                     <li>
+                       <input type="password" name="password" class="password" placeholder="Password" required><br>
+                     </li>
+                     <br>
+                     <li>
+                       <b><a><input type="submit" class="submitLogin" value="Submit"></a></b>
+                     </li>
+                   </ul>
+                 </form>
+               </div>
+        </div>
+        <div id="myModalSignup" class="modalLS">
+               <!-- Modal content -->
+               <div class="modal-content4">
+                 <span class="close" onclick="document.getElementById('myModalSignup').style.display='none'" style="color:black">x</span>
+                 <img class="ava" src="https://www.maxpixel.net/static/photo/1x/Sewing-Needle-Computer-Icon-Fashion-Sewing-Icon-Set-2387085.png">
+                 <center><b style="font-size:150%;"><br> Sign Up </b></center>
+                 <form name="myForm" onsubmit="return checkPassword(this)" method="post">
+                   <ul style="margin-left:0%; padding-left:0%;">
+                     <li style="margin-left:0%; padding-left:0%;">
+                       <input type="text" name="fname" placeholder="First Name" class="fname" required>
+                     </li>
+                     <li style="margin-left:0%; padding-left:0%;">
+                       <input type="text" name="lname" class="lname" placeholder="Last Name" required><br>
+                     </li>
+                     <br><b style="font-size: 100%;">Gender:</b>
+                     <input type="radio" id="male" name="gender" value="male" >
+                     <label for="male" style="font-size:60%;">Male</label>
+                     <input type="radio" id="female" name="gender" value="female">
+                     <label for="female" style="font-size:60%;">Female</label>
+                     <input type="radio" id="other" name="gender" value="other">
+                     <label for="other" style="font-size:60%;">Other</label>
+                      <br><br><b style="font-size: 80%;">Date of Birth: &nbsp&nbsp</b>
+                      <input type="date" id="birthday" name="birthday"><br>
+                     <li style="margin-left:0%; padding-left:0%;">
+                       <br><input type="email" name="email" placeholder="Email" class="email" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required><br>
+                     </li>
+                     <br>
+                     <li>
+                       <input type="password" name="password" placeholder="Password" class="password" required><br>
+                     </li>
+                     <li style="margin-left:3%; padding-left:0%; color:red;">
+                     * 1 Lower letter, 1 Capital letter, 1 digit and 1-8 characters.<br>
+                     </li>
+                     <br>
+                     <li>
+                       <input type="password" name="apassword" placeholder="Again Password" class="apassword"required><br>
+                     </li>
+                     <br>
+                     <li>
+                       <b><a><input type="submit" class="submitSignup" value="Submit"></a></b>
+                     </li>
+                   </ul>
+                 </form>
+               </div>
+        </div>
+
+    <center>
+    <section class="LBS">
+       <ul>
+        <li class="Call"><a href="#Call"> <img class="Call" src="https://cdn.iconscout.com/icon/free/png-256/incoming-call-470341.png"></a></li>
+        <li class="Dial"> Order online or call us : (+0123) 234 567 <a href="#Dial"></a></li>
+        <li class="Brand"><a href="#Brand"><img class="Brand" src=""></a></li>
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit"><img class="Search" src="https://cdn.pixabay.com/photo/2017/01/13/01/22/magnifying-glass-1976105_1280.png"></button>
+      </ul>
+    </section>
+    </center>
+    
+    <center>
+    <nav>
+      <ul>
+        <a href="index.html"><li class="Home"> Home </li></a>
+        <a href="Clothes.html"> <li class="Groceries">Clothes</li></a>
+        <a href="Accessories.html"> <li class="Household">Accessories</li></a>
+        <a href="AboutUs.html"><li class="AboutUs"> About Us </li></a>
+        <a href="ContactUs.html"><li class="ContactUs"> Contact Us </li></a>
+      </ul>
+    </nav>
+    </center>
+    </header>
+    
+     <div class="Card">
+       <div class="row1">
+         <center>
+         <div class="column1">
+           <ul>
+             <li class="Image">
+               <img class="itemImg" src="https://cdn.pixabay.com/photo/2017/09/29/15/42/fashion-2799476_1280.jpg">
+             </li>
+             <br>
+             <li class="Name">
+                Blue Jacket (Men)
+             </li>
+             <li>
+               <b>Rs. 999</b> &nbsp <s><font color="red">1999</font></s><font color="green">&nbsp&nbsp 50% OFF</font>
+             </li>
+             <br>
+             <li class="ViewMore">
+               <a href="#myModalRice" onclick="document.getElementById('myModalRice').style.display='block'" id="myBtn"> View More </a>
+             </li>
+             <div id="myModalRice" class="modal">
+               <!-- Modal content -->
+               <div class="modal-content">
+                 <span class="close" onclick="document.getElementById('myModalRice').style.display='none'" >&times;</span>
+                 <div class="ModalImage" style="text-align:left">
+                    <img class="MItem"  src="https://cdn.pixabay.com/photo/2017/09/29/15/42/fashion-2799476_1280.jpg" >
+                 </div>
+                 <div class="ModalDetails">
+                   <ul>
+                   <li>
+                     <ul style="text-align:left">
+                       <li> <span  class="MName">
+                        Blue Jacket (Men)</span>
+                       </li>
+                       <br>
+                       <li>
+                         <b> <span  class="MPrice">Rs. 999</span></b> &nbsp <s><font color="red">1999</font></s><font color="green">&nbsp&nbsp 50% OFF</font>
+                       </li>
+                       <br>
+                       <li>
+                         <button class="AddToCart" > ADD TO CART </button>
+                       </li>
+                       <br>
+                       <li>
+                         <b class="desc" style= "color:rgb(96, 96, 96)">Description:</b>
+                         <ul style="width: 75%; float: right" >
+                          <li style="width: 100%">
+                           <b>Blue Jacket</b><br>
+                           From timeless tailoring to everyday wear, the right jacket will keep you warm and in style. The brown color brings out your honest look while this chocolate leather motorcycle is superior and modish will give you just the right look to make a status statement and will be a staple item in your closet all year long and for years to come.
+                          </li>
+                          <li style="width: 100%">
+                           <p><b>Sizes</b><br>
+                           S M L XL XXL</p>
+                          </li>
+                         </ul>
+                       </li>
+                     </ul>
+                   </li>
+                 </ul>
+                 </div>
+               </div>
+             </div>
+           </ul>
+         </div>
+         <div class="column1">
+           <ul>
+             <li class="Image">
+               <img class="itemImg" src="https://www.maxpixel.net/static/photo/1x/Clothing-Pants-Fabric-Denim-Shoes-Fashion-3737413.jpg">
+             </li>
+             <br>
+             <li class="Name">
+                Grey Jeans (Men)
+             </li>
+             <li>
+               <b>Rs. 1349</b> &nbsp <s><font color="red">1499</font></s><font color="green">&nbsp&nbsp 10% OFF</font>
+             </li>
+             <br>
+             <li class="ViewMore">
+               <a href="#myModalDal" onclick="document.getElementById('myModalDal').style.display='block'" id="myBtn"> View More </a>
+             </li>
+             <div id="myModalDal" class="modal">
+               <!-- Modal content -->
+               <div class="modal-content">
+                 <span class="close" onclick="document.getElementById('myModalDal').style.display='none'" >&times;</span>
+                 <div class="ModalImage" style="text-align:left">
+                     <img class="MItem"  src="img/dal.jpeg" >
+                 </div>
+                 <div class="ModalDetails">
+                   <ul>
+                   <li>
+                     <ul style="text-align:left">
+                       <li class="MName">
+                        Grey Jeans
+                       </li>
+                       <br>
+                       <li>
+                         <b><span  class="MPrice"> Rs. 1349</span></b> &nbsp <s><font color="red">1499</font></s><font color="green">&nbsp&nbsp 10% OFF</font>
+                       </li>
+                       <br>
+                       <br>
+                       <li>
+                         <button class="AddToCart" > ADD TO CART </button>
+                       </li>
+                       <br>
+                       <br>
+                       <li>
+                         <b class="desc" style= "color:rgb(96, 96, 96)"">Description:</b>
+                         <ul style="width: 75%"; "float: right">
+                          <li style="width: 100%">
+                           <b>Grey Jeans</b><br>
+                           A smart pair of jeans with mid-wash detailing on the knees and below the pockets. It is a comfortable fit with the traditional 5-pockets design.
+                          </li>
+                          <li style="width: 100%">
+                           <p><b>Sizes</b><br>
+                           S M L XL XXL</p>
+                          </li>
+                         </ul>
+                       </li>
+                     </ul>
+                   </li>
+                 </ul>
+                 </div>
+               </div>
+           </ul>
+         </div>
+          <div class="column1">
+           <ul>
+             <li class="Image">
+               <img class="itemImg" src="https://pixahive.com/wp-content/uploads/2020/10/Sweat-Shirt-Backside-131617-pixahive.jpg">
+             </li>
+             <br>
+             <li class="Name">
+                Comfartable Sweatshirt (Men)
+             </li>
+             <li>
+               <b>Rs. 899</b> &nbsp <s><font color="red">1199</font></s><font color="green">&nbsp&nbsp 25% OFF</font>
+             </li>
+             <br>
+             <li class="ViewMore">
+               <a href="#myModalAtta" onclick="document.getElementById('myModalAtta').style.display='block'" id="myBtn"> View More </a>
+             </li>
+             <div id="myModalAtta" class="modal">
+               <!-- Modal content -->
+               <div class="modal-content">
+                 <span class="close" onclick="document.getElementById('myModalAtta').style.display='none'" >&times;</span>
+                 <div class="ModalImage" style="text-align:left">
+                     <img class="MItem" src="https://pixahive.com/wp-content/uploads/2020/10/Sweat-Shirt-Backside-131617-pixahive.jpg" >
+                 </div>
+                 <div class="ModalDetails">
+                   <ul>
+                   <li>
+                     <ul style="text-align:left">
+                       <li class="MName">
+                        Comfartable Sweatshirt (Men)
+                       </li>
+                       <br>
+                       <li>
+                         <b><span  class="MPrice"> Rs. 899</span></b> &nbsp <s><font color="red">1199</font></s><font color="green">&nbsp&nbsp 25% OFF</font>
+                       </li>
+                       <br>
+                       <br>
+                       <li>
+                         <a href="#" class="AddToCart" > ADD TO CART </a>
+                       </li>
+                       <br>
+                       <br>
+                       <li>
+                         <b class="desc" style="color:rgb(96, 96, 96)">Description:</b>
+                         <ul style="width: 75%; float: right" >
+                          <li style="width: 100%"><br>
+                           Comfartable Sweatshirt (Men)
+                          </li>
+                          <li style="width: 100%">
+                           <p><b>Sizes</b><br>
+                           S M L XL XXL</p>
+                          </li>
+                         </ul>
+                       </li>
+                     </ul>
+                   </li>
+                 </ul>
+                 </div>
+               </div>
+             </div>
+           </ul>
+         </div>
+          <div class="column1">
+           <ul>
+             <li class="Image">
+               <img class="itemImg" src="https://freesvg.org/img/wedding-suit.png">
+             </li>
+             <br>
+             <li class="Name">
+                Wedding Suit (Men)
+             </li>
+             <li>
+               <b>Rs. 2100</b> &nbsp <s><font color="red">3000</font></s><font color="green">&nbsp&nbsp 30% OFF</font>
+             </li>
+            <br>
+             <li class="ViewMore">
+               <a href="#myModalSugar" onclick="document.getElementById('myModalSugar').style.display='block'" id="myBtn"> View More </a>
+             </li>
+             <div id="myModalSugar" class="modal">
+               <!-- Modal content -->
+               <div class="modal-content">
+                 <span class="close" onclick="document.getElementById('myModalSugar').style.display='none'" >&times;</span>
+                 <div class="ModalImage" style="text-align:left">
+                     <img class="MItem"  src="https://freesvg.org/img/wedding-suit.png" >
+                 </div>
+                 <div class="ModalDetails">
+                   <ul>
+                   <li>
+                     <ul style="text-align:left">
+                       <li class="MName">
+                        Wedding Suit 
+                       </li>
+                       <br>
+                       <li>
+                         <b><span  class="MPrice"> Rs. 2100</span></b> &nbsp <s><font color="red">3000</font></s><font color="green">&nbsp&nbsp 30% OFF</font>
+                       </li>
+                       <br>
+                       <br>
+                       <li>
+                         <a href="#" class="AddToCart" > ADD TO CART </a>
+                       </li>
+                       <br>
+                       <br>
+                       <li>
+                         <b class="desc" style="color:rgb(96, 96, 96)">Description:</b>
+                         <ul style="width: 75%; float: right" >
+                          <li style="width: 100%">
+                           <br>
+                           Suit material : 70% Viscon , 26% polyester, 4% ElastaneMachine washable : No Fitting : Slim Fit Remarks : Dry Cleaner.
+                          </li>
+                          <li style="width: 100%">
+                           <p><b>Sizes</b><br>
+                           S M L XL XXL</p>
+                          </li>
+                         </ul>
+                       </li>
+                     </ul>
+                   </li>
+                 </ul>
+                 </div>
+               </div>
+           </ul>
+         </div>
+         <div class="column1">
+           <ul>
+             <li class="Image">
+               <img class="itemImg" src="https://i0.hippopx.com/photos/170/308/882/apron-french-provincial-style-preview.jpg">
+             </li>
+             <br>
+             <li class="Name">
+                Formal Floral Dress (Women)
+             </li>
+             <li>
+               <b>Rs. 1200</b> &nbsp <s><font color="red">2000</font></s><font color="green">&nbsp&nbsp 40% OFF</font>
+             </li>
+             <br>
+             <li class="ViewMore">
+               <a href="#myModalSalt" onclick="document.getElementById('myModalSalt').style.display='block'" id="myBtn"> View More </a>
+             </li>
+             <div id="myModalSalt" class="modal">
+               <!-- Modal content -->
+               <div class="modal-content">
+                 <span class="close" onclick="document.getElementById('myModalSalt').style.display='none'" >&times;</span>
+                 <div class="ModalImage" style="text-align:left">
+                     <img class="MItem"  src="https://i0.hippopx.com/photos/170/308/882/apron-french-provincial-style-preview.jpg" >
+                 </div>
+                 <div class="ModalDetails">
+                   <ul>
+                   <li>
+                     <ul style="text-align:left">
+                       <li class="MName" >
+                        Formal Floral Dress (Women)
+                       </li>
+                       <br>
+                       <li>
+                         <b><span  class="MPrice"> Rs. 1200</span></b> &nbsp <s><font color="red">2000</font></s><font color="green">&nbsp&nbsp 40% OFF</font>
+                       </li>
+                       <br>
+                       <br>
+                       <li>
+                         <a href="#" class="AddToCart" > ADD TO CART </a>
+                       </li>
+                       <br>
+                       <br>
+                       <li>
+                         <b class="desc" style="class="desc" color:rgb(96, 96, 96)">Description:</b>
+                         <ul style="width: 75%; float: right" >
+                          <li style="width: 100%">
+                           <br>
+                           Formal Floral Dress (Women)
+                          </li>
+                          <li style="width: 100%">
+                           <p><b>Sizes</b><br>
+                           S M L XL XXL</p>
+                          </li>
+                         </ul>
+                       </li>
+                     </ul>
+                   </li>
+                 </ul>
+                 </div>
+               </div>
+           </ul>
+         </div>
+          <div class="column1">
+           <ul>
+               <img class="itemImg" src="https://cdn.pixabay.com/photo/2020/05/06/16/46/denim-5138278_1280.jpg">
+             </li>
+             <br><br>
+             <li class="Name">
+                Denim Joggers (Women)
+             </li>
+             <li>
+               <b>Rs. 1499</span></b> &nbsp <s><font color="red">1999</font></s><font color="green">&nbsp&nbsp 25% OFF</font>
+             </li>
+             <br>
+             <li class="ViewMore">
+               <a href="#myModalOil" onclick="document.getElementById('myModalOil').style.display='block'" id="myBtn"> View More </a>
+             </li>
+             <div id="myModalOil" class="modal">
+               <!-- Modal content -->
+               <div class="modal-content">
+                 <span class="close" onclick="document.getElementById('myModalOil').style.display='none'" >&times;</span>
+                 <div class="ModalImage" style="text-align:left">
+                     <img class="MItem"  src="https://cdn.pixabay.com/photo/2020/05/06/16/46/denim-5138278_1280.jpg" >
+                 </div>
+                 <div class="ModalDetails">
+                   <ul>
+                   <li>
+                     <ul style="text-align:left">
+                       <li class="MName" >
+                        Denim Joggers (Women)
+                       </li>
+                       <br>
+                       <li>
+                         <b><span  class="MPrice"> Rs. 1499</span></b>
+                       </li>
+                       <br>
+                       <br>
+                       <li>
+                         <a href="#" class="AddToCart" > ADD TO CART </a>
+                       </li>
+                       <br>
+                       <br>
+                       <li>
+                         <b class="desc" style="color:rgb(96, 96, 96)">Description:</b>
+                         <ul style="width: 75%; float: right" >
+                          <li style="width: 100%">
+                           <br>
+                           Denim Joggers (Women)
+                          </li>
+                          <li style="width: 100%">
+                           <p><b>Sizes</b><br>
+                           S M L XL XXL</p>
+                          </li>
+                          </li>
+                         </ul>
+                       </li>
+                     </ul>
+                   </li>
+                 </ul>
+                 </div>
+               </div>
+           </ul>
+         </div>
+         <div class="column1">
+           <ul>
+             <li class="Image">
+               <img class="itemImg" src="https://cdn.pixabay.com/photo/2020/01/11/11/10/skirt-4757236_1280.jpg">
+             </li>
+             <br>
+             <li class="Name">
+               Long Skirt (Women)
+             </li>
+             <li>
+               <b> Rs. 999</b> &nbsp <s><font color="red">1999</font></s><font color="green">&nbsp&nbsp 50% OFF</font>
+             </li>
+             <br>
+             <li class="ViewMore">
+               <a href="#myModalTea" onclick="document.getElementById('myModalTea').style.display='block'" id="myBtn"> View More </a>
+             </li>
+             <div id="myModalTea" class="modal">
+               <!-- Modal content -->
+               <div class="modal-content">
+                 <span class="close" onclick="document.getElementById('myModalTea').style.display='none'" >&times;</span>
+                 <div class="ModalImage" style="text-align:left">
+                     <img class="MItem"  src="https://cdn.pixabay.com/photo/2020/01/11/11/10/skirt-4757236_1280.jpg" >
+                 </div>
+                 <b class="desc" style="color:rgb(96, 96, 96)">Description:</b>
+                   <ul>
+                   <li>
+                     <ul style="text-align:left">
+                       <li class="MName" >
+                        Long Skirt (Women)
+                       </li>
+                       <br>
+                       <li>
+                         <b> <span  class="MPrice">Rs. 999</span></b> &nbsp <s><font color="red">1999</font></s><font color="green">&nbsp&nbsp 50% OFF</font>
+                       </li>
+                       <br>
+                       <br>
+                       <li>
+                         <a href="#" class="AddToCart" > ADD TO CART </a>
+                       </li>
+                       <br>
+                       <br>
+                       <li>
+                         <b class="desc" style="color:rgb(96, 96, 96)">Description:</b>
+                         <ul style="width: 75%; float: right" >
+                          <li style="width: 100%">
+                           <br>
+                           Long Skirt (Women)
+                          </li>
+                          <li style="width: 100%">
+                           <p><b>Sizes</b><br>
+                           S M L XL XXL</p>
+                          </li>
+                         </ul>
+                       </li>
+                     </ul>
+                   </li>
+                 </ul>
+                 </div>
+               </div>
+           </ul>
+         </div>
+         <div class="column1">
+           <ul>
+             <li class="Image">
+               <img class="itemImg" src="https://upload.wikimedia.org/wikipedia/commons/6/6e/15990987992741257b7c3562f8a3ac14a6ed790d94_thumbnail_600x.webp">
+             </li>
+             <br>
+             <li class="Name">
+                Comfartable Sweatshirt (Women)
+             </li>
+             <li>
+               <b> Rs. 899</b> &nbsp <s><font color="red">999</font></s><font color="green">&nbsp&nbsp 10% OFF</font>
+             </li>
+             <li style="text-align:left">
+              <p>Comfartable Sweatshirt (Women)</p>
+             </li>
+             <li class="ViewMore">
+               <a href="#myModalTurmaric" onclick="document.getElementById('myModalTurmaric').style.display='block'" id="myBtn"> View More </a>
+             </li>
+             <div id="myModalTurmaric" class="modal">
+               <!-- Modal content -->
+               <div class="modal-content">
+                 <span class="close" onclick="document.getElementById('myModalTurmaric').style.display='none'" >&times;</span>
+                 <div class="ModalImage" style="text-align:left">
+                     <img class="MItem"  src="https://upload.wikimedia.org/wikipedia/commons/6/6e/15990987992741257b7c3562f8a3ac14a6ed790d94_thumbnail_600x.webp" >
+                 </div>
+                 <div class="ModalDetails">
+                   <ul>
+                   <li>
+                     <ul style="text-align:left">
+                       <li class="MName" >
+                        Comfartable Sweatshirt (Women)
+                       </li>
+                       <br>
+                       <li>
+                         <b><span  class="MPrice"> Rs. 899</span></b> &nbsp <s><font color="red">999</font></s><font color="green">&nbsp&nbsp 10% OFF</font>
+                       </li>
+                       <br>
+                       <br>
+                       <li>
+                         <a href="#" class="AddToCart" > ADD TO CART </a>
+                       </li>
+                       <br>
+                       <br>
+                       <li>
+                         <b class="desc" style="color:rgb(96, 96, 96)">Description:</b>
+                         <ul style="width: 75%; float: right" >
+                          <li style="width: 100%">
+                           <b>Brand</b><br>
+                           Comfartable Sweatshirt (Women)
+                          </li>
+                          <li style="width: 100%">
+                           <p><b>Sizes</b><br>
+                           S M L XL XXL</p>
+                          </li>
+                         </ul>
+                       </li>
+                     </ul>
+                   </li>
+                 </ul>
+                 </div>
+               </div>
+           </ul>
+         </div>
+         </center>
+       </div>
+    </div>
+    <footer>
+
+    <div class="footerNav">
+      <div>
+        <img class="DP" style="width: 200px; height:200px; margin-top:1%; margin-bottom:1%; margin-left:7%; padding:5%;" src="https://www.maxpixel.net/static/photo/1x/Sewing-Needle-Computer-Icon-Fashion-Sewing-Icon-Set-2387085.png">
+      </div>
+      <div>
+      <ul>
+        <li style="font-size:24px; color:rgb(240, 226, 38); padding-top:3%;"><b>Inportant Links </b></li><br>
+        <li class="Home"><a href="index.html"> Home </a></li>
+        <li class="Groceries"><a href="Clothes.html">Clothes</a></li>
+        <li class="Household"><a href="Accessories.html">Accessories</a></li>
+        <li class="AboutUs"><a href="AboutUs.html"> About Us </a></li>
+        <li class="ContactUs"><a href="ContactUs.html"> Contact Us </a></li>
+      </ul>
+      </div>
+      <div>
+      <ul>
+        <li style="color:rgb(240, 226, 38); padding-top:.5%;"><h3><b>Details</b></h3></li>
+        <li><b style="color:white"><h4 style="display:inline;">&nbsp&nbsp Mobile: &nbsp </h4></b><a href="tel:0123456789"> +91-0123456789</a></li>
+        <li><b style="color:white"><h4 style="display:inline;">&nbsp&nbsp Email:&nbsp </h4></b><a href="mailto:example@gmail.com?subject=subject text"> example@gmail.com </a></li>
+        <li><b style="color:white"><h4 style="display:inline;">&nbsp&nbsp Linkedin:&nbsp</h4> </b><a  "href="https://www.linkedin.com/in/tulika-panjal-037507193"> www.linkedin.com/in/tulika-panjal-037507193</a></li>
+        <li><b style="color:white"><h4 style="display:inline;">&nbsp&nbsp Instagram:&nbsp </h4></b><a  "href="https://www.instagram.com"> www.instagram.com</a></li>
+        <li><b style="color:white"><h4 style="display:inline;">&nbsp&nbsp Facebook: &nbsp</h4></b><a  "href="https://www.fb.com"> www.fb.com</a></li>
+      </ul><br>
+      </div>
+    </div>
+    <br>
+      <center>
+      Designed by <b> Shreya </b>
+      <br>
+      </center>
+    </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
